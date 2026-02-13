@@ -406,16 +406,18 @@
 </head>
 
 <body>
-  <!-- Screen 1: Qualifier -->
+  <!-- Screen 1: Age Qualifier -->
   <div class="screen qualifier-screen active" id="screen1">
-    <div class="qualifier-icon">🇩🇪🇨🇭🇦🇹</div>
-    <h1 class="qualifier-title">Woher kommst du?</h1>
-    <p class="qualifier-sub">Bitte bestätigen um fortzufahren</p>
+    <div class="qualifier-icon">🔞</div>
+    <h1 class="qualifier-title">Wie alt bist du?</h1>
+    <p class="qualifier-sub">Bitte bestätige dein Alter um fortzufahren</p>
     <select class="qualifier-select" id="qualifierSelect">
-      <option value="" disabled selected>Land auswählen</option>
-      <option value="de">🇩🇪 Deutschland</option>
-      <option value="ch">🇨🇭 Schweiz</option>
-      <option value="at">🇦🇹 Österreich</option>
+      <option value="" disabled selected>Alter auswählen</option>
+      <option value="under18">Unter 18</option>
+      <option value="18-21">18 – 21</option>
+      <option value="22-29">22 – 29</option>
+      <option value="30-39">30 – 39</option>
+      <option value="40+">40+</option>
     </select>
   </div>
 
@@ -527,29 +529,6 @@
           document.getElementById('screen2').classList.add('active');
         }, 1200);
       });
-
-      // Spots left - cookie based
-      var spotsEl = document.getElementById('spotsLeft');
-      var spots = getCookie('spots_left_uk');
-      
-      if (spots === null) {
-        spots = 20;
-        setCookie('spots_left_uk', spots, 1);
-      } else {
-        spots = parseInt(spots);
-      }
-      
-      spotsEl.textContent = spots + ' Nutzer';
-
-      function updateSpots() {
-        if (spots > 3) {
-          spots--;
-          setCookie('spots_left_uk', spots, 1);
-          spotsEl.textContent = spots + ' Nutzer';
-        }
-        setTimeout(updateSpots, Math.random() * 20000 + 15000);
-      }
-      setTimeout(updateSpots, 10000);
 
       // Countdown timer - cookie based
       var countdownEl = document.getElementById('countdown');
