@@ -100,7 +100,7 @@ html,body{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;background:va
 <div class="screen qs active" id="screen1">
   <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/1200px-PayPal.svg.png" alt="PayPal">
   <div class="qbadge">🇩🇪 Exklusiv für Deutschland</div>
-  <h1 class="qt">Mach jetzt 1.000€ auf PayPal</h1>
+  <h1 class="qt">PayPal Quiz</h1>
   <p class="qsub">Wähle deine Altersgruppe, um weiterzumachen</p>
   <select class="qsel" id="qualifierSelect">
     <option value="" disabled selected>Dein Alter</option>
@@ -129,9 +129,9 @@ html,body{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;background:va
     </div>
     <div class="sc">
       <div class="sct">So funktioniert's</div>
-      <div class="si"><div class="sic">📧</div><div class="scn"><h3>Schritt 1: E-Mail eingeben (60 Sek.)</h3><p>Erstelle ein Konto und bestätige deine Daten</p></div></div>
-      <div class="si"><div class="sic">🎯</div><div class="scn"><h3>Schritt 2: 3–5 einfache Angebote erledigen</h3><p>Jedes Angebot bringt dir <span class="ea">100–200€</span> – schnell & einfach!</p></div></div>
-      <div class="si"><div class="sic">💰</div><div class="scn"><h3>Schritt 3: Auszahlung direkt auf PayPal</h3><p>Schnelle Auszahlung – im Schnitt <span class="ea">650–1.000€</span> in der ersten Woche</p></div></div>
+      <div class="si"><div class="sic">📧</div><div class="scn"><h3>E-Mail eingeben (60 Sek.)</h3><p>Erstelle ein Konto und bestätige deine Daten</p></div></div>
+      <div class="si"><div class="sic">🎯</div><div class="scn"><h3>3–5 einfache Angebote erledigen</h3><p>Jedes Angebot bringt dir <span class="ea">100–200€</span> – schnell & einfach!</p></div></div>
+      <div class="si"><div class="sic">💰</div><div class="scn"><h3>Auszahlung direkt auf PayPal</h3><p>Schnelle Auszahlung – im Schnitt <span class="ea">650–1.000€</span> in der ersten Woche</p></div></div>
     </div>
     <div class="mo">
       <div class="ub">🚨 Platz reserviert</div>
@@ -152,7 +152,6 @@ html,body{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;background:va
   </div>
 </div>
 
-<!-- SINGLE QUESTION -->
 <div class="qm" id="q1">
   <div class="qc">
     <div id="q1c">
@@ -168,7 +167,6 @@ html,body{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;background:va
   </div>
 </div>
 
-<!-- SUCCESS -->
 <div class="qm" id="q2">
   <div class="qc">
     <div class="sw">
@@ -181,7 +179,6 @@ html,body{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;background:va
         <div class="swck"><div class="ci">✓</div><span>1.000€ Bonus freigeschaltet</span></div>
       </div>
       <a href="https://rewardorbit.com/r/eyJ0IjoicGF5cGFsLWRlIiwidSI6IjY4YjBkM2E5ZDc4YWY4ZWI1NDVmNzUwYSIsInRzIjoxNzcxNDMyNTE5ODY5fQ?s2=new" class="cta" style="margin-bottom:0">🚀 JETZT STARTEN</a>
-      <p class="mw">⚠️ Teilnahme nur ab 18 Jahren möglich</p>
     </div>
   </div>
 </div>
@@ -192,25 +189,19 @@ html,body{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;background:va
 (function(){
   function sC(n,v,d){var e="";if(d){var dt=new Date();dt.setTime(dt.getTime()+d*864e5);e="; expires="+dt.toUTCString()}document.cookie=n+"="+(v||"")+e+"; path=/"}
   function gC(n){var ne=n+"=",ca=document.cookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1);if(c.indexOf(ne)==0)return c.substring(ne.length)}return null}
-
   document.getElementById('qualifierSelect').addEventListener('change',function(){
     var lo=document.getElementById('loadingOverlay');lo.classList.add('show');
     setTimeout(function(){lo.classList.remove('show');document.getElementById('screen1').classList.remove('active');document.getElementById('screen2').classList.add('active');setTimeout(function(){document.getElementById('progressBar').style.width='67%'},300)},1200);
   });
-
   var cdEl=document.getElementById('countdown'),tl=gC('pp_cd')||(sC('pp_cd',299,1),299);tl=parseInt(tl);
   (function tick(){var m=Math.floor(tl/60),s=tl%60;cdEl.textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');if(tl>0){tl--;sC('pp_cd',tl,1);setTimeout(tick,1000)}})();
-
   var lc=2187,le=document.getElementById('liveCount');
   setInterval(function(){lc+=Math.floor(Math.random()*9)-4;lc=Math.max(1900,Math.min(2400,lc));le.textContent=lc.toLocaleString('de-DE')},4000);
-
   var ns=[{n:"Lukas",a:225,i:"L",t:"vor 3 Min."},{n:"Sarah",a:410,i:"S",t:"vor 8 Min."},{n:"Tim",a:185,i:"T",t:"vor 12 Min."},{n:"Anna",a:375,i:"A",t:"vor 5 Min."},{n:"Max",a:520,i:"M",t:"vor 18 Min."},{n:"Laura",a:290,i:"L",t:"vor 22 Min."},{n:"Jan",a:195,i:"J",t:"vor 2 Min."}],ni=0;
   function sN(){var b=document.getElementById('notifBox'),d=ns[ni],e=document.createElement('div');e.className='n';e.innerHTML='<div class="av">'+d.i+'</div><div><strong>'+d.n+'</strong> hat <span class="er">'+d.a+'€</span> erhalten · '+d.t+'</div>';b.appendChild(e);requestAnimationFrame(function(){e.classList.add('show')});setTimeout(function(){e.classList.remove('show');setTimeout(function(){if(b.contains(e))b.removeChild(e)},500)},5000);ni=(ni+1)%ns.length;setTimeout(sN,5000+Math.random()*2500)}
   setTimeout(sN,2500);
-
   window.confetti=function(){var c=['#003087','#0070ba','#00a1e0','#f5ba2e','#00b67a','#ef4444'];for(var i=0;i<40;i++){var e=document.createElement('div');e.className='cf';e.style.left=Math.random()*100+'vw';e.style.background=c[Math.floor(Math.random()*c.length)];e.style.animationDuration=(2+Math.random()*2)+'s';e.style.animationDelay=Math.random()*.8+'s';e.style.borderRadius=Math.random()>.5?'50%':'2px';e.style.width=(6+Math.random()*8)+'px';e.style.height=(6+Math.random()*8)+'px';document.body.appendChild(e);setTimeout(function(el){el.parentNode&&el.parentNode.removeChild(el)},4000,e)}};
 })();
-
 function startQuiz(){var s=window.scrollY;document.body.style.cssText='overflow:hidden;position:fixed;width:100%;top:-'+s+'px';document.getElementById('q1').classList.add('active')}
 function answerQ1(a){document.getElementById('q1c').style.display='none';document.getElementById('q1l').style.display='block';setTimeout(function(){document.getElementById('q1').classList.remove('active');document.getElementById('q2').classList.add('active');document.getElementById('q1c').style.display='block';document.getElementById('q1l').style.display='none';confetti()},1500)}
 window.addEventListener('pageshow',function(e){if(e.persisted){document.querySelectorAll('.qm').forEach(function(m){m.classList.remove('active')});document.body.style.cssText=''}});
