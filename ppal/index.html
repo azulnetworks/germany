@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>1000 Euro auf PayPal</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--b:#003087;--bl:#0070ba;--cy:#00a1e0;--gd:#f5ba2e;--dk:#001c64;--bg:#f5f7fa;--c:#fff;--t:#1a1a2e;--m:#6b7294;--br:#e2e8f0;--ok:#00b67a;--no:#ef4444}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;background:var(--bg);color:var(--t);min-height:100vh;overflow-x:hidden;line-height:1.5}
+.screen{display:none;min-height:100vh}.screen.active{display:flex}
+.qs{flex-direction:column;justify-content:center;align-items:center;padding:24px 20px;max-width:440px;margin:0 auto;width:100%}
+.logo{width:120px;margin-bottom:28px;filter:drop-shadow(0 4px 12px rgba(0,48,135,.15))}
+.qbadge{background:linear-gradient(135deg,var(--b),var(--bl));padding:10px 22px;border-radius:24px;font-size:13px;font-weight:700;margin-bottom:24px;color:#fff;display:flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(0,48,135,.25)}
+.qt{font-size:26px;font-weight:900;margin-bottom:8px;text-align:center;color:var(--dk)}
+.qsub{font-size:14px;color:var(--m);margin-bottom:28px;text-align:center}
+.qsel{width:100%;max-width:300px;padding:16px 20px;background:var(--c);border:2px solid var(--br);border-radius:14px;color:var(--t);font-size:16px;font-family:inherit;font-weight:600;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236b7294' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:20px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.qsel:focus{outline:none;border-color:var(--bl);box-shadow:0 0 0 4px rgba(0,112,186,.12)}
+.lo{display:none;position:fixed;inset:0;background:rgba(245,247,250,.97);z-index:1000;flex-direction:column;align-items:center;justify-content:center;backdrop-filter:blur(12px)}.lo.show{display:flex}
+.lr{width:48px;height:48px;border:3px solid var(--br);border-top-color:var(--b);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.lt{margin-top:16px;font-size:15px;font-weight:600;color:var(--m)}
+.pw{min-height:100vh;display:flex;flex-direction:column;padding:20px 16px 40px;max-width:440px;margin:0 auto}
+.tb{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.tbl{height:28px}
+.lb{display:flex;align-items:center;gap:6px;padding:6px 12px;background:var(--c);border:1px solid var(--br);border-radius:20px;font-size:12px;font-weight:600;color:var(--m)}
+.pd{width:7px;height:7px;background:var(--ok);border-radius:50%;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+.lc{color:var(--b);font-weight:800}
+.hc{background:var(--c);border-radius:20px;border:1px solid var(--br);padding:28px 24px;text-align:center;margin-bottom:16px;box-shadow:0 4px 24px rgba(0,0,0,.04);position:relative;overflow:hidden}
+.hc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--b),var(--cy),var(--gd))}
+.he{font-size:48px;margin-bottom:14px}
+.ht{font-size:28px;font-weight:900;line-height:1.15;margin-bottom:8px;color:var(--dk)}
+.hl{background:linear-gradient(135deg,var(--b),var(--cy));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hs{font-size:14px;color:var(--m);font-weight:500}
+.pc{background:var(--c);border:1px solid var(--br);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,.03)}
+.ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.pl{font-size:13px;font-weight:700}.pa{font-size:15px;font-weight:900;color:var(--b)}
+.pbw{height:28px;background:#eef2f7;border-radius:14px;overflow:hidden;position:relative}
+.pf{height:100%;width:0;background:linear-gradient(90deg,var(--b),var(--cy));border-radius:14px;transition:width 2s ease}
+.ptx{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:11px;font-weight:900;color:#fff;background:rgba(0,48,135,.85);border-radius:8px;padding:3px 10px;text-transform:uppercase}
+.sc{background:var(--c);border:1px solid var(--br);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,.03);position:relative;overflow:hidden}
+.sc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--b),var(--cy),var(--b))}
+.sct{font-size:11px;color:var(--b);text-transform:uppercase;letter-spacing:1.5px;font-weight:800;margin-bottom:16px;text-align:center}
+.si{display:flex;gap:16px;padding:14px 0;align-items:flex-start}.si:not(:last-child){border-bottom:1px solid var(--br)}
+.sic{width:46px;height:46px;background:linear-gradient(135deg,var(--b),var(--bl));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;box-shadow:0 4px 14px rgba(0,48,135,.25)}
+.scn h3{font-size:15px;font-weight:800;margin-bottom:3px}.scn p{font-size:13px;color:var(--m);font-weight:500;line-height:1.4}
+.ea{color:var(--b);font-weight:900}
+.mo{background:linear-gradient(135deg,rgba(0,48,135,.04),rgba(0,161,224,.07));border:2px solid var(--b);border-radius:18px;padding:22px;margin-bottom:16px;text-align:center;box-shadow:0 0 30px rgba(0,48,135,.1)}
+.ub{background:var(--b);color:#fff;padding:7px 16px;border-radius:20px;font-size:11px;font-weight:900;text-transform:uppercase;margin-bottom:10px;display:inline-block}
+.ot{font-size:18px;font-weight:900;text-transform:uppercase;margin-bottom:4px}
+.ba{font-size:36px;font-weight:900;color:var(--dk);margin:6px 0}
+.od{font-weight:600;font-size:14px;margin-top:8px}
+.pt{background:rgba(0,48,135,.05);border:1px solid rgba(0,48,135,.15);border-radius:12px;padding:12px;margin-top:14px;font-size:13px;font-weight:600}
+.sb{background:rgba(0,48,135,.04);border:1px solid rgba(0,48,135,.12);border-radius:12px;padding:12px 20px;margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:13px;font-weight:600}
+.sb .d{color:var(--br)}
+.cta{width:100%;padding:20px;background:linear-gradient(135deg,var(--b),var(--bl));border:none;border-radius:16px;font-size:18px;font-weight:800;color:#fff;cursor:pointer;text-decoration:none;display:block;text-align:center;margin-bottom:14px;transition:transform .2s,box-shadow .2s;box-shadow:0 6px 28px rgba(0,48,135,.35);font-family:inherit;text-transform:uppercase}
+.cta:active{transform:scale(.97)}.cta:hover{transform:translateY(-3px);box-shadow:0 10px 40px rgba(0,48,135,.45)}
+.aw{text-align:center;font-size:12px;color:var(--no);font-weight:700;margin-bottom:16px}
+.sr{display:flex;justify-content:center;gap:28px;padding-top:16px;border-top:1px solid var(--br);margin-top:4px}
+.sti{text-align:center}.sv{font-size:20px;font-weight:900;color:var(--dk)}.sl{font-size:10px;color:var(--m);text-transform:uppercase;letter-spacing:.5px;margin-top:2px;font-weight:600}
+.ts{margin-top:18px;text-align:center;background:linear-gradient(135deg,rgba(0,48,135,.04),rgba(0,161,224,.06));border:1px solid rgba(0,48,135,.1);border-radius:12px;padding:14px}
+.tl{font-size:12px;color:var(--b);font-weight:700}.tv{font-size:24px;font-weight:900;color:var(--dk);font-variant-numeric:tabular-nums}
+.nc{position:fixed;top:12px;left:50%;transform:translateX(-50%);width:90%;max-width:380px;z-index:9999;pointer-events:none}
+.n{background:rgba(255,255,255,.97);border:1px solid var(--br);border-radius:14px;padding:12px 16px;font-size:13px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 28px rgba(0,0,0,.1);opacity:0;transform:translateY(-30px);transition:all .45s ease;margin-bottom:8px;backdrop-filter:blur(12px)}
+.n.show{opacity:1;transform:translateY(0)}
+.n .av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--b),var(--cy));display:flex;align-items:center;justify-content:center;font-weight:900;font-size:12px;color:#fff;flex-shrink:0}
+.n .er{font-weight:900;color:var(--b)}
+.qm{position:fixed;top:0;left:0;width:100vw;height:100dvh;background:rgba(0,12,40,.92);display:none;align-items:center;justify-content:center;z-index:99999;padding:20px;backdrop-filter:blur(20px);overflow-y:auto}.qm.active{display:flex}
+.qc{background:var(--c);border:2px solid var(--b);border-radius:24px;padding:36px 28px;max-width:460px;width:100%;animation:mi .4s ease;position:relative;overflow:hidden}
+.qc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--b),var(--cy),var(--gd))}
+@keyframes mi{from{opacity:0;transform:scale(.92) translateY(12px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.qi{font-size:52px;text-align:center;margin-bottom:20px}
+.qtl{font-size:22px;font-weight:800;text-align:center;margin-bottom:10px;color:var(--dk);line-height:1.3}
+.qst{color:var(--m);text-align:center;margin-bottom:24px;font-size:14px;font-weight:500}
+.qo{display:flex;flex-direction:column;gap:12px}
+.qob{background:var(--c);border:2px solid var(--br);border-radius:14px;padding:18px 20px;font-size:15px;font-weight:600;cursor:pointer;transition:all .25s ease;display:flex;align-items:center;gap:14px;font-family:inherit;width:100%;text-align:left;color:var(--t)}
+.qob:hover{background:rgba(0,48,135,.03);border-color:var(--b);transform:translateX(4px)}
+.qoi{font-size:22px;flex-shrink:0}
+.ql{text-align:center;padding:40px 0}.ql .lr{margin:0 auto 16px}.ql p{color:var(--m);font-size:15px;font-weight:600}
+.sw{text-align:center;animation:fu .5s ease}
+@keyframes fu{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.swi{font-size:64px;margin-bottom:16px}
+.swt{font-size:26px;font-weight:900;color:var(--dk);margin-bottom:8px}
+.sws{color:var(--m);font-size:14px;margin-bottom:20px;font-weight:500}
+.swc{background:rgba(0,48,135,.03);border:1px solid rgba(0,48,135,.08);border-radius:12px;padding:16px 20px;margin-bottom:20px;text-align:left}
+.swck{display:flex;align-items:center;gap:10px;padding:8px 0;font-weight:600;font-size:14px}
+.ci{width:22px;height:22px;background:var(--ok);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:900;flex-shrink:0}
+.mw{text-align:center;font-size:12px;color:var(--no);margin-top:14px;font-weight:700}
+.cf{position:fixed;width:10px;height:10px;top:-10px;z-index:100000;animation:cff 3s ease-in forwards;pointer-events:none}
+@keyframes cff{0%{top:-10px;opacity:1;transform:rotate(0) translateX(0)}100%{top:110vh;opacity:0;transform:rotate(720deg) translateX(80px)}}
+@media(max-width:380px){.ht{font-size:24px}.qc{padding:28px 20px}.qtl{font-size:19px}.cta{font-size:16px;padding:18px}.ba{font-size:30px}}
+</style>
+</head>
+<body>
+<div class="nc" id="notifBox"></div>
+
+<div class="screen qs active" id="screen1">
+  <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/1200px-PayPal.svg.png" alt="PayPal">
+  <div class="qbadge">🇩🇪 Exklusiv für Deutschland</div>
+  <h1 class="qt">Mach jetzt 1.000€ auf PayPal</h1>
+  <p class="qsub">Wähle deine Altersgruppe, um weiterzumachen</p>
+  <select class="qsel" id="qualifierSelect">
+    <option value="" disabled selected>Dein Alter</option>
+    <option value="under18">Unter 18</option>
+    <option value="18-21">18 – 21</option>
+    <option value="22-29">22 – 29</option>
+    <option value="30-39">30 – 39</option>
+    <option value="40+">40+</option>
+  </select>
+</div>
+
+<div class="screen" id="screen2">
+  <div class="pw">
+    <div class="tb">
+      <img class="tbl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/1200px-PayPal.svg.png" alt="PayPal">
+      <div class="lb"><div class="pd"></div><span><span class="lc" id="liveCount">2.187</span> online</span></div>
+    </div>
+    <div class="hc">
+      <div class="he">💸</div>
+      <h1 class="ht">Kriege jetzt <span class="hl">1.000€ auf PayPal</span></h1>
+      <p class="hs">Melde dich an, erledige Aufgaben & kassiere sofort</p>
+    </div>
+    <div class="pc">
+      <div class="ph"><span class="pl">🔥 Dein Fortschritt zum Bonus</span><span class="pa">1.000€</span></div>
+      <div class="pbw"><div class="pf" id="progressBar"></div><div class="ptx">67% abgeschlossen</div></div>
+    </div>
+    <div class="sc">
+      <div class="sct">So funktioniert's</div>
+      <div class="si"><div class="sic">📧</div><div class="scn"><h3>Schritt 1: E-Mail eingeben (60 Sek.)</h3><p>Erstelle ein Konto und bestätige deine Daten</p></div></div>
+      <div class="si"><div class="sic">🎯</div><div class="scn"><h3>Schritt 2: 3–5 einfache Angebote erledigen</h3><p>Jedes Angebot bringt dir <span class="ea">100–200€</span> – schnell & einfach!</p></div></div>
+      <div class="si"><div class="sic">💰</div><div class="scn"><h3>Schritt 3: Auszahlung direkt auf PayPal</h3><p>Schnelle Auszahlung – im Schnitt <span class="ea">650–1.000€</span> in der ersten Woche</p></div></div>
+    </div>
+    <div class="mo">
+      <div class="ub">🚨 Platz reserviert</div>
+      <div class="ot">Du bist dabei!</div>
+      <div class="ba">1.000€</div>
+      <div class="od">Dein Platz ist gesichert – starte jetzt mit einfachen Aufgaben und <strong>erreiche 1.000€ schneller</strong>!</div>
+      <div class="pt">💎 <strong>Pro-Tipp:</strong> Die meisten Nutzer erledigen 3–5 Angebote in der ersten Woche und verdienen 650–800€!</div>
+    </div>
+    <div class="sb"><span>🔒</span><span>Sicher & geschützt</span><span class="d">•</span><span>Keine Kreditkarte nötig</span></div>
+    <button class="cta" onclick="startQuiz()">🚀 Jetzt starten</button>
+    <p class="aw">⚠️ Gib bei der Anmeldung 21+ Jahre an, sonst keine Auszahlung möglich</p>
+    <div class="sr">
+      <div class="sti"><div class="sv">4.8★</div><div class="sl">Bewertung</div></div>
+      <div class="sti"><div class="sv">320K+</div><div class="sl">Nutzer</div></div>
+      <div class="sti"><div class="sv">97%</div><div class="sl">Zufrieden</div></div>
+    </div>
+    <div class="ts"><div class="tl">Plätze nur noch verfügbar für</div><div class="tv" id="countdown">04:59</div></div>
+  </div>
+</div>
+
+<!-- SINGLE QUESTION -->
+<div class="qm" id="q1">
+  <div class="qc">
+    <div id="q1c">
+      <div class="qi">⏰</div>
+      <h3 class="qtl">Hast du Zeit, heute ein paar einfache Aufgaben zu erledigen?</h3>
+      <p class="qst">Die meisten Nutzer sind in 15–20 Minuten fertig</p>
+      <div class="qo">
+        <button class="qob" onclick="answerQ1('yes')"><span class="qoi">⚡</span><span>Ja, ich habe jetzt Zeit!</span></button>
+        <button class="qob" onclick="answerQ1('go')"><span class="qoi">🚀</span><span>Ich nehme mir Zeit – los geht's!</span></button>
+      </div>
+    </div>
+    <div id="q1l" class="ql" style="display:none"><div class="lr"></div><p>Dein Platz wird reserviert...</p></div>
+  </div>
+</div>
+
+<!-- SUCCESS -->
+<div class="qm" id="q2">
+  <div class="qc">
+    <div class="sw">
+      <div class="swi">🎉</div>
+      <h3 class="swt">Glückwunsch!</h3>
+      <p class="sws">Du hast dich für den 1.000€ PayPal Bonus qualifiziert!</p>
+      <div class="swc">
+        <div class="swck"><div class="ci">✓</div><span>Berechtigung bestätigt</span></div>
+        <div class="swck"><div class="ci">✓</div><span>Platz reserviert</span></div>
+        <div class="swck"><div class="ci">✓</div><span>1.000€ Bonus freigeschaltet</span></div>
+      </div>
+      <a href="https://rewardorbit.com/r/eyJ0IjoicGF5cGFsLWRlIiwidSI6IjY4YjBkM2E5ZDc4YWY4ZWI1NDVmNzUwYSIsInRzIjoxNzcxNDMyNTE5ODY5fQ?s2=new" class="cta" style="margin-bottom:0">🚀 JETZT STARTEN</a>
+      <p class="mw">⚠️ Teilnahme nur ab 18 Jahren möglich</p>
+    </div>
+  </div>
+</div>
+
+<div class="lo" id="loadingOverlay"><div class="lr"></div><div class="lt">Wird geladen...</div></div>
+
+<script>
+(function(){
+  function sC(n,v,d){var e="";if(d){var dt=new Date();dt.setTime(dt.getTime()+d*864e5);e="; expires="+dt.toUTCString()}document.cookie=n+"="+(v||"")+e+"; path=/"}
+  function gC(n){var ne=n+"=",ca=document.cookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1);if(c.indexOf(ne)==0)return c.substring(ne.length)}return null}
+
+  document.getElementById('qualifierSelect').addEventListener('change',function(){
+    var lo=document.getElementById('loadingOverlay');lo.classList.add('show');
+    setTimeout(function(){lo.classList.remove('show');document.getElementById('screen1').classList.remove('active');document.getElementById('screen2').classList.add('active');setTimeout(function(){document.getElementById('progressBar').style.width='67%'},300)},1200);
+  });
+
+  var cdEl=document.getElementById('countdown'),tl=gC('pp_cd')||(sC('pp_cd',299,1),299);tl=parseInt(tl);
+  (function tick(){var m=Math.floor(tl/60),s=tl%60;cdEl.textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');if(tl>0){tl--;sC('pp_cd',tl,1);setTimeout(tick,1000)}})();
+
+  var lc=2187,le=document.getElementById('liveCount');
+  setInterval(function(){lc+=Math.floor(Math.random()*9)-4;lc=Math.max(1900,Math.min(2400,lc));le.textContent=lc.toLocaleString('de-DE')},4000);
+
+  var ns=[{n:"Lukas",a:225,i:"L",t:"vor 3 Min."},{n:"Sarah",a:410,i:"S",t:"vor 8 Min."},{n:"Tim",a:185,i:"T",t:"vor 12 Min."},{n:"Anna",a:375,i:"A",t:"vor 5 Min."},{n:"Max",a:520,i:"M",t:"vor 18 Min."},{n:"Laura",a:290,i:"L",t:"vor 22 Min."},{n:"Jan",a:195,i:"J",t:"vor 2 Min."}],ni=0;
+  function sN(){var b=document.getElementById('notifBox'),d=ns[ni],e=document.createElement('div');e.className='n';e.innerHTML='<div class="av">'+d.i+'</div><div><strong>'+d.n+'</strong> hat <span class="er">'+d.a+'€</span> erhalten · '+d.t+'</div>';b.appendChild(e);requestAnimationFrame(function(){e.classList.add('show')});setTimeout(function(){e.classList.remove('show');setTimeout(function(){if(b.contains(e))b.removeChild(e)},500)},5000);ni=(ni+1)%ns.length;setTimeout(sN,5000+Math.random()*2500)}
+  setTimeout(sN,2500);
+
+  window.confetti=function(){var c=['#003087','#0070ba','#00a1e0','#f5ba2e','#00b67a','#ef4444'];for(var i=0;i<40;i++){var e=document.createElement('div');e.className='cf';e.style.left=Math.random()*100+'vw';e.style.background=c[Math.floor(Math.random()*c.length)];e.style.animationDuration=(2+Math.random()*2)+'s';e.style.animationDelay=Math.random()*.8+'s';e.style.borderRadius=Math.random()>.5?'50%':'2px';e.style.width=(6+Math.random()*8)+'px';e.style.height=(6+Math.random()*8)+'px';document.body.appendChild(e);setTimeout(function(el){el.parentNode&&el.parentNode.removeChild(el)},4000,e)}};
+})();
+
+function startQuiz(){var s=window.scrollY;document.body.style.cssText='overflow:hidden;position:fixed;width:100%;top:-'+s+'px';document.getElementById('q1').classList.add('active')}
+function answerQ1(a){document.getElementById('q1c').style.display='none';document.getElementById('q1l').style.display='block';setTimeout(function(){document.getElementById('q1').classList.remove('active');document.getElementById('q2').classList.add('active');document.getElementById('q1c').style.display='block';document.getElementById('q1l').style.display='none';confetti()},1500)}
+window.addEventListener('pageshow',function(e){if(e.persisted){document.querySelectorAll('.qm').forEach(function(m){m.classList.remove('active')});document.body.style.cssText=''}});
+</script>
+</body>
+</html>
